@@ -1,0 +1,34 @@
+﻿<Window x:Class="Kwiaciarnia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kwiaciarnia"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Rejestracja" Height="600" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Tla/Kwiaty.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Border Background="DodgerBlue" MinWidth="100" MaxWidth="400" Margin="15,0,15,0" MinHeight="200" MaxHeight="1000">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="White" ShadowDepth="10"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Rejestracja" FontSize="30" FontWeight="Bold" Width="150" Foreground="White" FontFamily="Times New Roman"/>
+
+                <Grid>
+                    <Button HorizontalAlignment="Left" Content="Rejestracja" Margin="10 20 0 20" Background="#FF6870EE" BorderBrush="#FF6870EE" FontFamily="Times New Roman" FontWeight="Bold" Click="Button_Click_Rejestracja_"/>
+                    <Button HorizontalAlignment="Right" Content="Zaloguj sie" Margin="0 20 10 20" Background="#FF6870EE" BorderBrush="#FF6870EE" FontFamily="Times New Roman" FontWeight="Bold" Click="Button_Click_Zaloguj_Sie"/>
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Login" Background="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="200" Margin="0 50 0 0"/>
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Hasło" Background="White" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Width="200" Margin="0 30 0 0"/>
+                <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Powtórz hasło" Background="White" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Width="200" Margin="0 30 0 0"/>
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Background="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="200" Margin="0 30 0 0"/>
+                <Button Content="Rejestracja" Margin="0 40 0 0" HorizontalAlignment="Center" Width="200" Background="#FF6870EE" BorderBrush="#FF6870EE" FontFamily="Times New Roman" FontWeight="Bold" Click="Button_Rejestracja"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

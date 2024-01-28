@@ -1,0 +1,32 @@
+﻿<Window x:Class="Kwiaciarnia.Zarzadzanie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kwiaciarnia"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Zarządzanie Kwiatami" Height="600" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGridFlowers" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Margin="0,238,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="346">
+            <TextBox x:Name="textBoxNewFlowerName" Width="200" Margin="0 10 0 0"  materialDesign:HintAssist.Hint="Nazwa"/>
+            <TextBox x:Name="textBoxNewFlowerPrice" Width="200" Margin="0 10 0 0"  materialDesign:HintAssist.Hint="Wartość"/>
+            <Button Content="Add New Flower" Width="150" Height="30" Margin="0 10 0 0" Click="Button_AddNewFlower"/>
+
+            <TextBox x:Name="textBoxSelectedFlowerName" Width="200" Margin="0 20 0 0" materialDesign:HintAssist.Hint="Nowa nazwa"/>
+            <TextBox x:Name="textBoxSelectedFlowerPrice" Width="200" Margin="0 10 0 0" materialDesign:HintAssist.Hint="Nowa wartość"/>
+            <Button Content="Update Selected Flower" Width="200" Height="30" Margin="0 10 0 0" Click="Button_UpdateSelectedFlower"/>
+
+
+            <TextBlock Text="Usuń wybrany kwiat" FontSize="18" FontWeight="Bold" Foreground="Black" Width="170" Margin="0 15"/>
+            <Button Content="Usuń" Margin="0 5 0 5" HorizontalAlignment="Center" Width="100" Click="Button_DeleteSelectedFlower"/>
+        </StackPanel>
+    </Grid>
+</Window>
